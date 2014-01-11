@@ -1,0 +1,34 @@
+1) compilatore: 
+	parlare della possibilità di cambiare il toolsest, esperienza di migrazione 2005-2008-2010-2012
+	parlare dell'analisi statica, riciclare parte del lavoro sui warning level e annotazioni
+	parlare dell'SDL, magari approfondendo il tema
+	compatibilita C++ 11 , full?
+
+2) debugger:
+	cosa differenzia il debugger c++ da quello c#? i pdb li generiamo sempre? sono diversi da debug e release? 	dire che su grandi solution, le perf di compilazione degradano se si fanno simboli in release
+	dire che a partire dal vs2012 abbiamo la possibilita di debuggare solo il nostro codice anche per c++
+	mostrare qualche froceria del debugger
+	fare vedere l'attach to process, magari con una S-Function ?
+
+3) profiler
+	plugin da scaricare per vedere lo stato delle perf c++ (vedi link)
+	profiler di VS: mostrare il fatto che è wizard, studiare differenza fra cpu sampling e instrumentation
+	hot path, grafici da condividere ecc
+
+4) security ?
+
+5) altro?
+
+
+http://blogs.msdn.com/b/vcblog/archive/2009/12/08/c-native-multi-targeting.aspx
+http://msdn.microsoft.com/en-us/library/hh266747.aspx
+http://msdn.microsoft.com/en-us/library/fda2bad5.aspx
+http://msdn.microsoft.com/en-us/library/jj153218.aspx
+http://blogs.msdn.com/b/vcblog/archive/tags/ide/	
+http://blogs.msdn.com/b/vcblog/archive/2011/08/24/10200097.aspx
+http://blogs.msdn.com/b/vcblog/archive/2013/08/06/c-ide-performance-improvement-in-visual-studio-2013-preview.aspx
+http://msdn.microsoft.com/en-us/library/hh704261.aspx	
+http://msdn.microsoft.com/en-us/library/ee461605.aspx
+http://msdn.microsoft.com/en-us/library/4cftbc6c.aspx
+http://msdn.microsoft.com/en-us/library/k3a3hzw7.aspx
+	
