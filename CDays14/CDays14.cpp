@@ -22,7 +22,10 @@ int _tmain(int argc, _TCHAR* argv[])
 //	func1(); //C4995
 	
 	//unsigned int u = (-5 + 4U);  //C4308
-	string dllName = "DllPlugin";
+	string dllName = "Girovaga";
+	char * aPath = "J:\\Progetti\\";
+	SetDllDirectoryA(aPath);
+	
 	auto h = LoadLibraryA(dllName.c_str());
 	pfunc p;
 	int a = 0;

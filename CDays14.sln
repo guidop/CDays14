@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CDays14", "CDays14\CDays14.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DllPlugin", "DllPlugin\DllPlugin.vcxproj", "{7075487A-F843-491D-9E2B-4CD871DFB7C2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DllPluginTest", "DllPluginTest\DllPluginTest.vcxproj", "{555C3629-7FFD-4553-A0A8-9BA0E47A7225}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +23,10 @@ Global
 		{7075487A-F843-491D-9E2B-4CD871DFB7C2}.Debug|Win32.Build.0 = Debug|Win32
 		{7075487A-F843-491D-9E2B-4CD871DFB7C2}.Release|Win32.ActiveCfg = Release|Win32
 		{7075487A-F843-491D-9E2B-4CD871DFB7C2}.Release|Win32.Build.0 = Release|Win32
+		{555C3629-7FFD-4553-A0A8-9BA0E47A7225}.Debug|Win32.ActiveCfg = Debug|Win32
+		{555C3629-7FFD-4553-A0A8-9BA0E47A7225}.Debug|Win32.Build.0 = Debug|Win32
+		{555C3629-7FFD-4553-A0A8-9BA0E47A7225}.Release|Win32.ActiveCfg = Release|Win32
+		{555C3629-7FFD-4553-A0A8-9BA0E47A7225}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
