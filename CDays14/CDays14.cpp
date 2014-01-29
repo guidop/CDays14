@@ -5,7 +5,7 @@
 #include <Windows.h>
 #include <string>
 #include <iostream>
-
+#include "..\DummyOne\DummyOne.h"
 using namespace std;
 
 void func1()
@@ -13,6 +13,8 @@ void func1()
 
 }
 #pragma deprecated (func1)
+
+
 
 typedef int(*pfunc)(int, int);
 int _tmain(int argc, _TCHAR* argv[])
@@ -25,7 +27,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	string dllName = "Girovaga";
 	char * aPath = "J:\\Progetti\\";
 	SetDllDirectoryA(aPath);
-	
+	CallSleep();
 	auto h = LoadLibraryA(dllName.c_str());
 	pfunc p;
 	int a = 0;
