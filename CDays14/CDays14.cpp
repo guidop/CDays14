@@ -1,43 +1,46 @@
-// CDays14.cpp : Defines the entry point for the console application.
-//
-
 #include "stdafx.h"
-#include <Windows.h>
-#include <string>
 #include <iostream>
-#include "..\DummyOne\DummyOne.h"
+#include <map>
+#include <string>
+#include <chrono>
+#include <thread>
+#include <mutex>
+
 using namespace std;
+std::mutex g_pages_mutex;
+std::map<std::string, std::string> g_pages;
+std::map<std::string, std::string> g_pages2;
 
-void func1()
+void save_page(const std::string &url, int aTime)
 {
+	// simulate a long page fetch
+	std::this_thread::sleep_for(std::chrono::seconds(aTime));
+	std::string result = "fake content";
 
-}
-#pragma deprecated (func1)
+	g_pages_mutex.lock(); // or, to be exception-safe, use std::lock_guard
+	g_pages[url] = result;	
+	g_pages_mutex.unlock();
 
-
-
-typedef int(*pfunc)(int, int);
-int _tmain(int argc, _TCHAR* argv[])
-{
-	//int a;
-//	int b=a*2; //C4700
-//	func1(); //C4995
+	g_pages_mutex.lock(); // or, to be exception-safe, use std::lock_guard
+	g_pages2[url] = result;
+	g_pages_mutex.unlock();
 	
-	//unsigned int u = (-5 + 4U);  //C4308
-	string dllName = "Girovaga";
-	char * aPath = "J:\\Progetti\\";
-	SetDllDirectoryA(aPath);
-	CallSleep();
-	auto h = LoadLibraryA(dllName.c_str());
-	pfunc p;
-	int a = 0;
-	if (h)
-	{
-		void *pp = GetProcAddress(h, "Calculate");
-		p = (pfunc)pp;
-		a = p(1, 4);
-	}
-	cout << a << endl;
-	return 0;
 }
 
+int main()
+{
+
+	std::thread t1(save_page, "http://foo", 2);
+	std::thread t2(save_page, "http://bar", 7);
+	t1.join();
+	t2.join();
+
+	// safe to access g_pages without lock now, as the threads are joined
+	for (const auto &pair : g_pages) {
+		std::cout << pair.first << " => " << pair.second << '\n';
+	}
+
+	for (const auto &pair : g_pages2) {
+		std::cout << pair.first << " => " << pair.second << '\n';
+	}
+}
