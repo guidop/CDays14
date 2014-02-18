@@ -34,3 +34,13 @@ http://msdn.microsoft.com/en-us/library/k3a3hzw7.aspx
 http://blogs.msdn.com/b/sdl/archive/2011/12/02/security.aspx
 http://technet.microsoft.com/en-US/video/Gg491765	
 http://blogs.msdn.com/b/hkamel/archive/2013/10/24/visual-studio-2013-static-code-analysis-in-depth-what-when-and-how.aspx
+
+PGO
+editor (peak, cose base)
+debug multithread
+aggiungere qualche warning?
+conclusioni
+slide marco
+demo profiler (verifica grafici)
+
+
