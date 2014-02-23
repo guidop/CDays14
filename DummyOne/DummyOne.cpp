@@ -1,34 +1,31 @@
 #include "DummyOne.h"
-#include <Windows.h>
+
+
+
+inline int StageValidation1()
+{
+	return 1;
+}
+inline int StageValidation2()
+{
+	return 2;
+}
+
+void Validatadata(int err)
+{
+	if ((err=StageValidation1()) != 0)
+		goto Error;
+	goto Error;
+	if ((err = StageValidation2()) != 0)
+		goto Error;
+
+Error:
+	err = -1;
+}
+
 
 DUMMY1EXPORTAPI void CallSleep()
 {
-	Sleep(5000);
-
-	for (int i = 0; i < 1000000; i++)
-	{
-
-	}
-}
-
-class TestOne
-{
-private:
-	
-public:
-	TestOne();
-	const int m_a;
-	const int m_b;
-};
-
-TestOne::TestOne() :m_a(0), m_b(0)
-{
-	
-}
-
-void TestClass()
-{
-	TestOne t;
-
-	
+	int err=0;
+	Validatadata(err);
 }
