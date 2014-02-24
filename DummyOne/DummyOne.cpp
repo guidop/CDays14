@@ -15,7 +15,7 @@ void Validatadata(int err)
 {
 	if ((err=StageValidation1()) != 0)
 		goto Error;
-	goto Error;
+	//goto Error;
 	if ((err = StageValidation2()) != 0)
 		goto Error;
 

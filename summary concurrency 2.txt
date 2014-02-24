@@ -1,0 +1,39 @@
+report Cdays 14-5
+1 total contention
+t2 a 10
+t1 a 2
+join t1
+join t2
+contention inizia al secondo 10 e dura 2 secondi. Contention sul thread che si mette in sleep per 2 sec
+-----
+
+report Cdays 14-6
+2 total contention
+t2 a 10
+t1 a 2
+join t2
+join t1
+contention inizia al secondo 10 e dura 2 secondi. Contention sul thread che si mette in sleep per 2 sec + contention sul main
+-----
+
+report Cdays 14-8
+1 total contention
+t1 a 2
+t2 a 10
+join t2
+join t1
+contention inizia al secondo 2 e dura 10 secondi. Contention sul thread che si mette in sleep per 10 sec
+-----
+
+report Cdays 14-9
+2 total contention
+t1 a 2
+t2 a 10
+join t1
+join t2
+contention inizia al secondo 2 e dura 10 secondi. Contention sul thread che si mette in sleep per 10 sec + contention sul main
+-----
+
+
+
+
